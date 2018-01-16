@@ -1,13 +1,13 @@
-## practice
+# practice
 
-#Design/Coding Exercise
- We have four design problems outlined in the document below. We require you to provide a
+## Design/Coding Exercise
+* We have four design problems outlined in the document below. We require you to provide a
 solution, written in Java
- You may not use any external libraries to solve the problem itself, but you may use external
+* You may not use any external libraries to solve the problem itself, but you may use external
 libraries or tools for building or testing purposes.
 
 
-#Problem 1: Airport Baggage
+## Problem 1: Airport Baggage
  
 Denver International Airport has decided to give an automated baggage system another shot. The hardware and tracking
 systems from the previous attempt are still in place, they just need a system to route the baggage.  The system will route
@@ -20,31 +20,54 @@ Claim.
 
 Input: The input consists of several sections.  The beginning of each section is marked by a line starting: “#
 Section:”
+
 Section 1: A weighted bi-directional graph describing the conveyor system.
+
 Format: &lt;Node 1&gt; &lt;Node 2&gt; &lt;travel_time&gt;
+
 Section 2: Departure list Format:
+
 &lt;flight_id&gt; &lt;flight_gate&gt; &lt;destination&gt; &lt;flight_time&gt;
+
 Section 3: Bag list Format:
+
 &lt;bag_number&gt; &lt;entry_point&gt; &lt;flight_id&gt;
+
  
 Output: The optimized route for each bag
+
 &lt;Bag_Number&gt; &lt;point_1&gt; &lt;point_2&gt; [&lt;point_3&gt;, …] : &lt;total_travel_time&gt;
+
 The output should be in the same order as the Bag list section of the input.
+
  
 Example Input:
-# Section: Conveyor System
+
+#Section: Conveyor System
+
 Concourse_A_Ticketing A5 5
+
 A5 BaggageClaim 5
+
 A5 A10 4
+
 A5 A1 6
+
 A1 A2 1
+
 A2 A3 1
+
 A3 A4 1
+
 A10 A9 1
+
 A9 A8 1
+
 A8 A7 1
+
 A7 A6 1
-# Section: Departures
+
+#Section: Departures
 UA10 A1 MIA 08:00
 UA11 A1 LAX 09:00
 UA12 A1 JFK 09:45
@@ -54,7 +77,7 @@ UA15 A2 JFK 10:00
 UA16 A3 JFK 09:00
 UA17 A4 MHT 09:15
 UA18 A5 LAX 10:15
-# Section: Bags
+#Section: Bags
 0001 Concourse_A_Ticketing UA12
 0002 A5 UA17
 0003 A2 UA10
@@ -72,7 +95,7 @@ Example Output:
 
 
 
-#Problem 2: Theatre Seating
+## Problem 2: Theatre Seating
 You run a small theater and each month, you have patrons mail in requests for pre-sale tickets. You need to process
 these ticket requests and either tell them where their party will sit or explain to the patron why you can&#39;t complete their
 order.
@@ -125,7 +148,7 @@ Brown Row 4 Section 2
 Miller Call to split party.
 
 
-# Problem 3 Inventory Management 1
+## Problem 3 Inventory Management 1
 Mr. X owns a store that sells almost everything you think about. Now he wants a inventory management
 system to manage his inventory. Mr. X feels that controlling his inventory through SMS from his mobile
 will be revolutionary. So as a prequel, he decides that he wants a system that accepts one line commands
@@ -221,7 +244,7 @@ a same item. Profits should be calculated with old selling price for the items s
 with new selling price for the items bought after updating.
 
 
-# Problem 4: Traffic Signals
+## Problem 4: Traffic Signals
 Write a program that controls the traffic signals for a four-way intersection. Initially, we consider traffic
 flowing in straight lines only, no turns. The four directions are S(outhbound) and N(orthbound) on Snell
 Rd; and W(estbound) and E(astbound) on Weaver Rd. The traffic lights should obey the following rules:
@@ -296,7 +319,7 @@ through the intersection (or making a left turn) from the other lane.
 7: N = 4; S = 4; E = 4; W = 4
 8: N = 4; S = 4; E = 4; W = 4
 
-# Problem 5: Pricing Engine
+## Problem 5: Pricing Engine
 An online retail company conducts market research to competitively price their products.
 Surveyed data contains Product code, Competitor and Price.
 
