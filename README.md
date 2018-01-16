@@ -208,18 +208,18 @@ Med01 30.63 34.29 90 2756.70 <br />
 Mobile01 10.51 44.56 246 2585.46 <br />
 Tab01 57.00 84.98 91 5187.00 <br />
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-Total value 11253.87
+Total value 11253.87 <br />
 Profit since previous report -724.75
 
 
 **In-Office Extension:**
 
-f) updateSellPrice itemName newSellPrice
+f) updateSellPrice itemName newSellPrice <br />
 Mr. X is now happy with the current system, however at times some goods are not selling out
 faster than expected. In this case he wants to change the initial selling price of that item. So he wants a
 new command. This command will update the sellingPrice of the specified item.
 
-report:
+report: <br />
 Now while calculating the report profit, the system should take care of 2 different selling prices for
 a same item. Profits should be calculated with old selling price for the items sold before updating and
 with new selling price for the items bought after updating.
@@ -253,15 +253,15 @@ only a simulation, so print the output when it&#39;s ready.
 
 8. Expected output
 
-0: N = 0; S = 0; E = 0; W = 0
-1: N = 0; S = 0; E = 1; W = 1
-2: N = 0; S = 0; E = 2; W = 2
-3: N = 0; S = 0; E = 3; W = 3
-4: N = 1; S = 1; E = 4; W = 4
-5: N = 2; S = 2; E = 5; W = 5
-6: N = 3; S = 3; E = 5; W = 5
-7: N = 4; S = 4; E = 5; W = 5
-8: N = 5; S = 5; E = 6; W = 6
+0: N = 0; S = 0; E = 0; W = 0 <br />
+1: N = 0; S = 0; E = 1; W = 1 <br />
+2: N = 0; S = 0; E = 2; W = 2 <br />
+3: N = 0; S = 0; E = 3; W = 3 <br />
+4: N = 1; S = 1; E = 4; W = 4 <br />
+5: N = 2; S = 2; E = 5; W = 5 <br />
+6: N = 3; S = 3; E = 5; W = 5 <br />
+7: N = 4; S = 4; E = 5; W = 5 <br />
+8: N = 5; S = 5; E = 6; W = 6 <br />
 
 
 **In-Office Extension:**
@@ -274,7 +274,6 @@ Additional rules:
 10. A car can make right turns during the one second when both signals are red. It takes a car 1 second to
 make a right turn (whether it is stopped at the intersection or just arrived at the intersection).
 
-Restricted - External
 
 
 11. Cars may not make a right turn when traffic from the cross-road is moving. (For cars going straight
@@ -290,15 +289,15 @@ through the intersection (or making a left turn) from the other lane.
 
 15. New expected output:
 
-0: N = 0; S = 0; E = 0; W = 0
-1: N = 0; S = 0; E = 1; W = 1
-2: N = 0; S = 0; E = 2; W = 2
-3: N = 0; S = 0; E = 3; W = 3
-4: N = 1; S = 1; E = 3; W = 3
-5: N = 2; S = 2; E = 4; W = 4
-6: N = 3; S = 3; E = 4; W = 4
-7: N = 4; S = 4; E = 4; W = 4
-8: N = 4; S = 4; E = 4; W = 4
+0: N = 0; S = 0; E = 0; W = 0 <br />
+1: N = 0; S = 0; E = 1; W = 1 <br />
+2: N = 0; S = 0; E = 2; W = 2 <br />
+3: N = 0; S = 0; E = 3; W = 3 <br />
+4: N = 1; S = 1; E = 3; W = 3 <br />
+5: N = 2; S = 2; E = 4; W = 4 <br />
+6: N = 3; S = 3; E = 4; W = 4 <br />
+7: N = 4; S = 4; E = 4; W = 4 <br />
+8: N = 4; S = 4; E = 4; W = 4 <br />
 
 ## Problem 5: Pricing Engine
 An online retail company conducts market research to competitively price their products.
@@ -309,50 +308,48 @@ frequently, the least amongst them is chosen.
 
 Products are classified based on parameters like Supply, Demand. Possible values are Low (L), High (H)
 
-If Supply is High and Demand is High, Product is sold at same price as chosen price.
-If Supply is Low and Demand is Low, Product is sold at 10 % more than chosen price.
-If Supply is Low and Demand is High, Product is sold at 5 % more than chosen price.
-If Supply is High and Demand is Low, Product is sold at 5 % less than chosen price.
+If Supply is High and Demand is High, Product is sold at same price as chosen price. <br />
+If Supply is Low and Demand is Low, Product is sold at 10 % more than chosen price. <br />
+If Supply is Low and Demand is High, Product is sold at 5 % more than chosen price. <br />
+If Supply is High and Demand is Low, Product is sold at 5 % less than chosen price. <br />
 
-Prices less than 50% of average price are treated as promotion and not considered.
-Prices more than 50% of average price are treated as data errors and not considered.
+Prices less than 50% of average price are treated as promotion and not considered. <br />
+Prices more than 50% of average price are treated as data errors and not considered. <br />
+
 Input consists of number of products, followed by each Product&#39;s supply and demand parameters.
 followed by number of surveyed prices, followed by competitor prices.
 
 Output must be recommended price for each product.
 
-**Input 1:**
-2
-flashdrive H H
+**Input 1:** <br />
+2 <br />
+flashdrive H H <br />
+ssd L H <br />
+5 <br />
+flashdrive X 1.0 <br />
+ssd X 10.0 <br />
+flashdrive Y 0.9 <br />
+flashdrive Z 1.1 <br />
+ssd Y 12.5 <br />
 
-Restricted - External
-
-ssd L H
-5
-flashdrive X 1.0
-ssd X 10.0
-flashdrive Y 0.9
-flashdrive Z 1.1
-ssd Y 12.5
-
-**Output 1:**
-A 0.9
+**Output 1:** <br />
+A 0.9 <br />
 B 10.5
 
-**Input 2:**
-2
-mp3player H H
-ssd L L
-8
-ssd W 11.0
-ssd X 12.0
-mp3player X 60.0
-mp3player Y 20.0
-mp3player Z 50.0
-ssd V 10.0
-ssd Y 11.0
-ssd Z 12.0
+**Input 2:** <br />
+2 <br />
+mp3player H H <br />
+ssd L L <br />
+8 <br />
+ssd W 11.0 <br />
+ssd X 12.0 <br />
+mp3player X 60.0 <br />
+mp3player Y 20.0 <br />
+mp3player Z 50.0 <br />
+ssd V 10.0 <br />
+ssd Y 11.0 <br />
+ssd Z 12.0 <br />
 
-**Output 2:**
-A 50.0
+**Output 2:** <br />
+A 50.0 <br />
 B 12.1
