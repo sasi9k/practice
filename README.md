@@ -20,11 +20,9 @@ to get bags to their destinations.  Bags with a flight id of “ARRIVAL” are 
 Claim.
 
 **Input**: The input consists of several sections.  The beginning of each section is marked by a line starting: “#
-Section:”
-
-Section 1: A weighted bi-directional graph describing the conveyor system.
-
-Format: &lt;Node 1&gt; &lt;Node 2&gt; &lt;travel_time&gt;
+Section:”__
+Section 1: A weighted bi-directional graph describing the conveyor system.__
+Format: &lt;Node 1&gt; &lt;Node 2&gt; &lt;travel_time&gt;__
 
 Section 2: Departure list Format:
 
