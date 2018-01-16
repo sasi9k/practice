@@ -189,24 +189,24 @@ report <br />
 
 **Expected Output** <br />
 INVENTORY REPORT <br />
-Item Name    Bought At    Sold At    AvailableQty    Value
--- -- -- -- - -- -- -- -- - -- -- -- - -- -- -- -- -- - -- -- -- -
-Book01       10.50        13.79      100             1050.00 <br />
-Food01    1.47 3.98 498 732.06 <br />
-Med01 30.63 34.29 100 3063.00 <br />
-Tab01 57.00 84.98 96 5472.00 <br />
+| Item Name | Bought At | Sold At | AvailableQty | Value   |
+| --------- | --------- | ------- | ------------ | ------- |
+| Book01    |   10.50   | 13.79   |   100        | 1050.00 |
+| Food01    | 1.47      | 3.98    | 498          | 732.06  |
+| Med01     | 30.63     | 34.29   | 100          | 3063.00 |
+| Tab01     | 57.00     | 84.98   | 96           | 5472.00 |
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-Total value 10317.06 <br />
-Profit since previous report 116.94
+Total value    10317.06 <br />
+Profit since previous report  116.94
 
 
 INVENTORY REPORT <br />
-Item Name Bought At Sold At AvailableQty Value
--- -- -- -- - -- -- -- -- - -- -- -- - -- -- -- -- -- - -- -- -- -
-Food01 1.47 3.98 493 724.71 <br />
-Med01 30.63 34.29 90 2756.70 <br />
-Mobile01 10.51 44.56 246 2585.46 <br />
-Tab01 57.00 84.98 91 5187.00 <br />
+| Item Name | Bought At | Sold At | AvailableQty | Value   |
+| --------- | --------- | ------- | ------------ | ------- |
+| Food01    |   1.47    | 3.98    |   493        | 724.71  |
+| Med01     | 30.63     | 34.29   | 90           | 2756.70 |
+| Mobile01  | 10.51     | 44.56   | 246          | 2585.46 |
+| Tab01     | 57.00     | 84.98   | 91           | 5187.00 |
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 Total value 11253.87 <br />
 Profit since previous report -724.75
