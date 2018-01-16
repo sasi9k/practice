@@ -23,74 +23,55 @@ Claim.
 Section:” <br />
 Section 1: A weighted bi-directional graph describing the conveyor system. <br />
 Format: &lt;Node 1&gt; &lt;Node 2&gt; &lt;travel_time&gt; <br />
-
-Section 2: Departure list Format:
-
-&lt;flight_id&gt; &lt;flight_gate&gt; &lt;destination&gt; &lt;flight_time&gt;
-
-Section 3: Bag list Format:
-
-&lt;bag_number&gt; &lt;entry_point&gt; &lt;flight_id&gt;
+Section 2: Departure list Format: <br />
+&lt;flight_id&gt; &lt;flight_gate&gt; &lt;destination&gt; &lt;flight_time&gt; <br />
+Section 3: Bag list Format: <br />
+&lt;bag_number&gt; &lt;entry_point&gt; &lt;flight_id&gt; <br />
 
  
-**Output**: The optimized route for each bag
-
+**Output**: The optimized route for each bag <br />
 &lt;Bag_Number&gt; &lt;point_1&gt; &lt;point_2&gt; [&lt;point_3&gt;, …] : &lt;total_travel_time&gt;
 
 The output should be in the same order as the Bag list section of the input.
 
  
-**Example Input:**
-
-#Section: Conveyor System
-
-Concourse_A_Ticketing A5 5
-
-A5 BaggageClaim 5
-
-A5 A10 4
-
-A5 A1 6
-
-A1 A2 1
-
-A2 A3 1
-
-A3 A4 1
-
-A10 A9 1
-
-A9 A8 1
-
-A8 A7 1
-
-A7 A6 1
-
-#Section: Departures
-UA10 A1 MIA 08:00
-UA11 A1 LAX 09:00
-UA12 A1 JFK 09:45
-UA13 A2 JFK 08:30
-UA14 A2 JFK 09:45
-UA15 A2 JFK 10:00
-UA16 A3 JFK 09:00
-UA17 A4 MHT 09:15
-UA18 A5 LAX 10:15
-#Section: Bags
-0001 Concourse_A_Ticketing UA12
-0002 A5 UA17
-0003 A2 UA10
-0004 A8 UA18
-0005 A7 ARRIVAL
+**Example Input:** <br />
+#Section: Conveyor System <br />
+Concourse_A_Ticketing A5 5 <br />
+A5 BaggageClaim 5 <br />
+A5 A10 4 <br />
+A5 A1 6 <br />
+A1 A2 1 <br />
+A2 A3 1 <br />
+A3 A4 1 <br />
+A10 A9 1 <br />
+A9 A8 1 <br />
+A8 A7 1 <br />
+A7 A6 1 <br />
+#Section: Departures <br />
+UA10 A1 MIA 08:00 <br />
+UA11 A1 LAX 09:00 <br />
+UA12 A1 JFK 09:45 <br />
+UA13 A2 JFK 08:30 <br />
+UA14 A2 JFK 09:45 <br />
+UA15 A2 JFK 10:00 <br /> 
+UA16 A3 JFK 09:00 <br />
+UA17 A4 MHT 09:15 <br />
+UA18 A5 LAX 10:15 <br /> 
+#Section: Bags <br />
+0001 Concourse_A_Ticketing UA12 <br />
+0002 A5 UA17 <br />
+0003 A2 UA10 <br />  
+0004 A8 UA18 <br />
+0005 A7 ARRIVAL <br />
  
-**Example Output:**
-0001 Concourse_A_Ticketing A5 A1 : 11
-0002 A5 A1 A2 A3 A4 : 9
-0003 A2 A1 : 1
-0004 A8 A9 A10 A5 : 6
+**Example Output:** 
 
-
-0005 A7 A8 A9 A10 A5 BaggageClaim : 12
+0001 Concourse_A_Ticketing A5 A1 : 11 <br />
+0002 A5 A1 A2 A3 A4 : 9 <br />
+0003 A2 A1 : 1 <br />
+0004 A8 A9 A10 A5 : 6 <br />
+0005 A7 A8 A9 A10 A5 BaggageClaim : 12 <br />
 
 
 
@@ -110,25 +91,26 @@ Your program must parse a theater layout and a list of ticket requests and produ
 same order as the requests.
 
 The theater layout is made up of 1 or more rows. Each row is made up of 1 or more sections separated by a space.
+
 After the theater layout, there is one empty line, followed by 1 or more theater requests. The theater request is made up
 of a name followed by a space and the number of requested tickets.
 
 
-**Sample input:**
-6 6
-3 5 5 3
-4 6 6 4
-2 8 8 2
-6 6
-
-Smith 2
-Jones 5
-Davis 6
-Wilson 100
-Johnson 3
-Williams 4
-Brown 8
-Miller 12
+**Sample input:** <br />
+6 6 <br />
+3 5 5 3 <br />
+4 6 6 4 <br />
+2 8 8 2 <br />
+6 6 <br />
+ 
+Smith 2 <br />
+Jones 5 <br />
+Davis 6 <br />
+Wilson 100 <br />
+Johnson 3 <br />
+Williams 4 <br />
+Brown 8 <br />
+Miller 12 <br />
 
 Your program must produce results to standard output in the same order as the requests, with the name of the person
 who requested the ticket and either the row and section of the ticket or the explanations &quot;Sorry, we can&#39;t handle your
@@ -137,14 +119,14 @@ party&quot; or &quot;Call to split party.&quot;
 
 **Sample output:**
 
-Smith Row 1 Section 1
-Jones Row 2 Section 2
-Davis Row 1 Section 2
-Wilson Sorry, we can&#39;t handle your party.
-Johnson Row 2 Section 1
-Williams Row 1 Section 1
-Brown Row 4 Section 2
-Miller Call to split party.
+Smith Row 1 Section 1 <br />
+Jones Row 2 Section 2 <br />
+Davis Row 1 Section 2 <br />
+Wilson Sorry, we can&#39;t handle your party. <br />
+Johnson Row 2 Section 1 <br />
+Williams Row 1 Section 1 <br />
+Brown Row 4 Section 2 <br />
+Miller Call to split party. 
 
 
 ## Problem 3 Inventory Management 1
@@ -152,26 +134,27 @@ Mr. X owns a store that sells almost everything you think about. Now he wants a 
 system to manage his inventory. Mr. X feels that controlling his inventory through SMS from his mobile
 will be revolutionary. So as a prequel, he decides that he wants a system that accepts one line commands
 and performs the respective operation.
+
 Below is the list of commands he needs in the system:
 
-a) create itemName costPrice sellingPrice
+a) create itemName costPrice sellingPrice <br />
 Whenever Mr. X wants to add a new item to his store he issues a create command. This command
 creates a new item in the inventory with the given cost price and selling price. The prices are rounded off
 to two decimal places.
 
-b) delete itemName
+b) delete itemName <br />
 If Mr. X decides not to sell an item anymore, then he simply issues a delete command. This
 command will remove the item from the inventory.
 
-c) updateBuy itemName quantity
+c) updateBuy itemName quantity <br />
 Whenever Mr. X purchases additional quantity of the mentioned item, then he issues a updateBuy
 command. This command should increase the quantity of the mentioned item.
 
-d) updateSell itemName quantity
+d) updateSell itemName quantity <br />
 Whenever Mr. X sells some item, then he issues a updateSell command. This command should
 deduct the quantity of the mentioned item.
 
-e) report
+e) report <br />
 Whenever Mr. X wants to view his inventory list he issues the report command. This command
 should print the current inventory details in the specified format sorted by alphabetical order. Apart from
 printing the inventory it has to report on the profit made by Mr. X since last report generation.
@@ -179,54 +162,51 @@ Where profit is calculated by: ∑ (sellingPrice-costPrice) of the sold items mu
 costPrice of the deleted items.
 
 
-**Sample Input**
-create Book01 10.50 13.79
-create Food01 1.47 3.98
-create Med01 30.63 34.29
-create Tab01 57.00 84.98
-updateBuy Tab01 100
-updateSell Tab01 2
-updateBuy Food01 500
-updateBuy Book01 100
-updateBuy Med01 100
-updateSell Food01 1
-updateSell Food01 1
-updateSell Tab01 2
-report
-delete Book01
-updateSell Tab01 5
-create Mobile01 10.51 44.56
-
-
-
-updateBuy Mobile01 250
-updateSell Food01 5
-updateSell Mobile01 4
-updateSell Med01 10
-report
+**Sample Input** <br />
+create Book01 10.50 13.79 <br />
+create Food01 1.47 3.98 <br />
+create Med01 30.63 34.29 <br />
+create Tab01 57.00 84.98 <br /> 
+updateBuy Tab01 100 <br />
+updateSell Tab01 2 <br />
+updateBuy Food01 500 <br />
+updateBuy Book01 100 <br />
+updateBuy Med01 100 <br />
+updateSell Food01 1 <br />
+updateSell Food01 1 <br />
+updateSell Tab01 2 <br />
+report <br />
+delete Book01 <br />
+updateSell Tab01 5 <br />
+create Mobile01 10.51 44.56 <br />
+updateBuy Mobile01 250 <br />
+updateSell Food01 5 <br />
+updateSell Mobile01 4 <br />
+updateSell Med01 10 <br />
+report <br />
 #
 
 
-**Expected Output**
-INVENTORY REPORT
-Item Name Bought At Sold At AvailableQty Value
+**Expected Output** <br />
+INVENTORY REPORT <br />
+Item Name    Bought At    Sold At    AvailableQty    Value
 -- -- -- -- - -- -- -- -- - -- -- -- - -- -- -- -- -- - -- -- -- -
-Book01 10.50 13.79 100 1050.00
-Food01 1.47 3.98 498 732.06
-Med01 30.63 34.29 100 3063.00
-Tab01 57.00 84.98 96 5472.00
+Book01       10.50        13.79      100             1050.00 <br />
+Food01    1.47 3.98 498 732.06 <br />
+Med01 30.63 34.29 100 3063.00 <br />
+Tab01 57.00 84.98 96 5472.00 <br />
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
-Total value 10317.06
+Total value 10317.06 <br />
 Profit since previous report 116.94
 
 
-INVENTORY REPORT
+INVENTORY REPORT <br />
 Item Name Bought At Sold At AvailableQty Value
 -- -- -- -- - -- -- -- -- - -- -- -- - -- -- -- -- -- - -- -- -- -
-Food01 1.47 3.98 493 724.71
-Med01 30.63 34.29 90 2756.70
-Mobile01 10.51 44.56 246 2585.46
-Tab01 57.00 84.98 91 5187.00
+Food01 1.47 3.98 493 724.71 <br />
+Med01 30.63 34.29 90 2756.70 <br />
+Mobile01 10.51 44.56 246 2585.46 <br />
+Tab01 57.00 84.98 91 5187.00 <br />
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 Total value 11253.87
 Profit since previous report -724.75
