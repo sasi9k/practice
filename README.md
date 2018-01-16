@@ -12,13 +12,14 @@ libraries or tools for building or testing purposes.
 Denver International Airport has decided to give an automated baggage system another shot. The hardware and tracking
 systems from the previous attempt are still in place, they just need a system to route the baggage.  The system will route
 baggage checked, connecting, and terminating in Denver.
+
  
 You have been asked to implement a system that will route bags to their flights or the proper baggage claim.  The input
 describes the airport conveyor system, the departing flights, and the bags to be routed.  The output is the optimal routing
 to get bags to their destinations.  Bags with a flight id of “ARRIVAL” are terminating in Denver are routed to Baggage
 Claim.
 
-Input: The input consists of several sections.  The beginning of each section is marked by a line starting: “#
+**Input**: The input consists of several sections.  The beginning of each section is marked by a line starting: “#
 Section:”
 
 Section 1: A weighted bi-directional graph describing the conveyor system.
@@ -34,14 +35,14 @@ Section 3: Bag list Format:
 &lt;bag_number&gt; &lt;entry_point&gt; &lt;flight_id&gt;
 
  
-Output: The optimized route for each bag
+**Output**: The optimized route for each bag
 
 &lt;Bag_Number&gt; &lt;point_1&gt; &lt;point_2&gt; [&lt;point_3&gt;, …] : &lt;total_travel_time&gt;
 
 The output should be in the same order as the Bag list section of the input.
 
  
-Example Input:
+**Example Input:**
 
 #Section: Conveyor System
 
@@ -84,7 +85,7 @@ UA18 A5 LAX 10:15
 0004 A8 UA18
 0005 A7 ARRIVAL
  
-Example Output:
+**Example Output:**
 0001 Concourse_A_Ticketing A5 A1 : 11
 0002 A5 A1 A2 A3 A4 : 9
 0003 A2 A1 : 1
@@ -115,7 +116,7 @@ After the theater layout, there is one empty line, followed by 1 or more theater
 of a name followed by a space and the number of requested tickets.
 
 
-Sample input:
+**Sample input:**
 6 6
 3 5 5 3
 4 6 6 4
@@ -136,7 +137,7 @@ who requested the ticket and either the row and section of the ticket or the exp
 party&quot; or &quot;Call to split party.&quot;
 
 
-Sample output:
+**Sample output:**
 
 Smith Row 1 Section 1
 Jones Row 2 Section 2
@@ -180,7 +181,7 @@ Where profit is calculated by: ∑ (sellingPrice-costPrice) of the sold items mu
 costPrice of the deleted items.
 
 
-Sample Input
+**Sample Input**
 create Book01 10.50 13.79
 create Food01 1.47 3.98
 create Med01 30.63 34.29
@@ -198,7 +199,7 @@ delete Book01
 updateSell Tab01 5
 create Mobile01 10.51 44.56
 
-Restricted - External
+
 
 updateBuy Mobile01 250
 updateSell Food01 5
@@ -206,7 +207,9 @@ updateSell Mobile01 4
 updateSell Med01 10
 report
 #
-Expected Output
+
+
+**Expected Output**
 INVENTORY REPORT
 Item Name Bought At Sold At AvailableQty Value
 -- -- -- -- - -- -- -- -- - -- -- -- - -- -- -- -- -- - -- -- -- -
@@ -231,7 +234,7 @@ Total value 11253.87
 Profit since previous report -724.75
 
 
-In-Office Extension:
+**In-Office Extension:**
 
 f) updateSellPrice itemName newSellPrice
 Mr. X is now happy with the current system, however at times some goods are not selling out
@@ -283,7 +286,7 @@ only a simulation, so print the output when it&#39;s ready.
 8: N = 5; S = 5; E = 6; W = 6
 
 
-In-Office Extension:
+**In-Office Extension:**
 
 Additional rules:
 
@@ -340,7 +343,7 @@ followed by number of surveyed prices, followed by competitor prices.
 
 Output must be recommended price for each product.
 
-Input 1:
+**Input 1:**
 2
 flashdrive H H
 
@@ -354,11 +357,11 @@ flashdrive Y 0.9
 flashdrive Z 1.1
 ssd Y 12.5
 
-Output 1:
+**Output 1:**
 A 0.9
 B 10.5
 
-Input 2:
+**Input 2:**
 2
 mp3player H H
 ssd L L
@@ -372,6 +375,6 @@ ssd V 10.0
 ssd Y 11.0
 ssd Z 12.0
 
-Output 2:
+**Output 2:**
 A 50.0
 B 12.1
